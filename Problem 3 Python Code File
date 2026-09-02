@@ -1,0 +1,19 @@
+# Problem 3: Validating Email Address
+
+# Keep asking for the email until a valid email is entered
+while True:
+    # Ask the user to enter their email address
+    email = input("Enter your email: ")
+
+    # Check if the email contains both "@" and "."
+    if "@" in email and "." in email:
+
+        # Display the accepted email address
+        print("Email accepted:", email)
+
+        # Stop the loop because the email is valid
+        break
+
+    else:
+        # Display an error message for an invalid email
+        print("Invalid email! Please enter a valid email address.")
