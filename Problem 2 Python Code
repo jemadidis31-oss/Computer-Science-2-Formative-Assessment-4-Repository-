@@ -1,0 +1,29 @@
+# Problem 2: Validating Phone Number Format
+
+while True:
+    # Ask the user to enter their phone number
+    phone = input("Enter your phone number: ")
+
+    # Check the length
+    if len(phone) != 13:
+        print("Invalid format! Please enter your phone number in 09XX-XXX-XXXX format.")
+        continue
+
+    # Check if it starts with 09
+    if phone[0:2] != "09":
+        print("Invalid format! Please enter your phone number in 09XX-XXX-XXXX format.")
+        continue
+
+    # Check the first hyphen
+    if phone[4] != "-":
+        print("Invalid format! Please enter your phone number in 09XX-XXX-XXXX format.")
+        continue
+
+    # Check the second hyphen
+    if phone[8] != "-":
+        print("Invalid format! Please enter your phone number in 09XX-XXX-XXXX format.")
+        continue
+
+    # If all checks passed, accept the number
+    print("Phone number accepted:", phone)
+    break
